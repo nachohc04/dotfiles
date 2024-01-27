@@ -20,7 +20,6 @@ import XMonad.Util.Run
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.Spacing
 import XMonad.Layout.LayoutModifier
-import XMonad.Hooks.FadeWindows
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -246,9 +245,9 @@ myEventHook = mempty
 -- Perform an arbitrary action on each internal state change or X event.
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
-myLogHook = fadeWindowsLogHook myFadeHook
+myLogHook = return() 
 --handleEventHook = fadeWindowsEventHook
-myFadeHook = composeAll [ transparency 0.1, isUnfocused --> transparency 0.1 ]
+-- myFadeHook = composeAll [ transparency 0.1, isUnfocused --> transparency 0.1 ]
 
 ------------------------------------------------------------------------
 -- Startup hook
@@ -260,7 +259,7 @@ myFadeHook = composeAll [ transparency 0.1, isUnfocused --> transparency 0.1 ]
 -- By default, do nothing.
 myStartupHook = do
 	spawnOnce "nitrogen --restore &"
-	spawnOnce "picom &"
+	spawnOnce "picom --config /home/nacho/.config/picom.conf &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.

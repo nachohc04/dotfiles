@@ -4,7 +4,7 @@ Config {
      font =         "Bitstream Vera Sans Mono Bold 12"
    , additionalFonts = [ "Bitstream Vera Sans Mono Bold 12", "Source Code Pro 16"]
    , bgColor =      "black"
-   , alpha =        210
+   -- , alpha =        210
    , fgColor =      "#646464"
    , position =     Static { xpos = 0 , ypos = 0, width = 1920, height = 20 }
    , border =       NoBorder
