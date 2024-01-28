@@ -58,9 +58,8 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#dddddd"
--- light pastel green: #81b58e
-myFocusedBorderColor = "#468255"
+myNormalBorderColor  = "#e6e6e6"
+myFocusedBorderColor = "#cccccc"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -284,7 +283,7 @@ defaults = def {
         borderWidth        = myBorderWidth,
         modMask            = myModMask,
         workspaces         = myWorkspaces,
-       -- normalBorderColor  = myNormalBorderColor,
+        normalBorderColor  = myNormalBorderColor,
         focusedBorderColor = myFocusedBorderColor,
 
       -- key bindings

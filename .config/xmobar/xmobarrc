@@ -13,7 +13,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "
+   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% | %pomodoro% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -105,4 +105,7 @@ Config {
                              , ("us"         , "<fc=#8B0000>US</fc>")
                              ]
         ]
+	-- potato-c status
+	, Run potui          [ ("--normal", "<fc=#0B0000>pomodoro</fc>")
+			     ]
    }
